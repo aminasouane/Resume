@@ -199,7 +199,8 @@ color : #A2A2A2
 }
 .skills .container .my-skills .skill {
     position: relative;
-    width: 500px;
+    width: 300px;
+    max-width: 90%;
     height: 25px;
     background-color:#F0F0F0 ;
     border-radius: 2px;
@@ -212,3 +213,12 @@ color : #A2A2A2
     background-color: var(--main-color);
     border-radius: 2px;
 }
+@media(max-width: 991px) {
+    .skills .container {
+        flex-direction: column;
+    }
+    .skills .main-heading {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }
