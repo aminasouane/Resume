@@ -1,0 +1,214 @@
+/* global rules *********************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700&family=Cairo:wght@200;300;400;500;600;700;800;900&family=Dancing+Script:wght@400;500;600;700&family=Lexend+Deca:wght@100;200;300;400;500;600;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+input {
+    border : none;
+    outline : none;
+    cursor: pointer;
+}
+:root {
+    --main-color : #b3888a;
+    --secondary-color : #bbb8b8;
+}
+.container {
+    min-height: 97px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* small screen **************************************************************************************/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+  }
+  /* medium screen******************************************************************************************/
+  @media(min-width: 992px) {
+      .container {
+          width: 970px;
+      }
+    }
+    /* large screen******************************************************************************************/
+  @media(min-width: 1200px) {
+      .container {
+          width: 1170px;
+      }
+  }
+  /*end of global rules**************************************************************************************/
+header .container {
+    position: relative;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo a {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var( --main-color);
+}
+header .container  ul {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+}
+header .container  ul li {
+    margin-left: 25px;
+}
+header .container  ul a {
+    position: relative;
+    color : var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+header .container  ul a::before {
+    position: absolute;
+    content : "";
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+header .container  ul li a:hover {
+    color : var(--main-color)
+}
+header .container  ul li a:hover::before {
+    width: 100%;
+}
+header .container i {
+    color : var(--main-color);
+    display: none;
+}
+/*header .container i:hover + ul {
+ position: absolute;
+ display: flex;
+ flex-direction: column;
+ bottom : -240px;
+ right : 0; 
+ background-color: #b38888 ;
+ width: 200px;
+}
+header .container i:hover + ul li {
+    margin-bottom: 30px;
+    width: 100%;  
+}
+header .container i:hover + ul li a {
+    color : #ffffff
+}*/
+@media(max-width: 991px) {
+    header .container  ul {
+        display: none;
+    } 
+    header .container i {
+        display: block;
+    } 
+  }
+/* end of header******************************************************************************************/
+/*start of landing****************************************************************************************/
+.landing  {
+    height: calc(100vh - 72px);
+    background-image: url(../images/images.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.landing .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.landing .container .about {
+    
+}
+.landing .container p:nth-child(1) {
+    color : var(--main-color);
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+}
+.landing .container h1 {
+    color : #32333C;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.landing .container h1 + p {
+    color : #9095A8;
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.landing .container input {
+    background-color: var(--main-color);
+    padding : 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color : #ffffff
+}
+.landing .container .social {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 20px;  
+}
+.landing .container .social a {
+    margin-right: 25px;
+    color : var(--main-color)
+}
+/*end of landing******************************************************************************************/
+/*start of skills*******************************************************************************************/
+.skills .main-heading {
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.skills .main-heading h1{
+font-size:40px;
+}
+.skills .main-heading p {
+color : #A2A2A2
+}
+.skills .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skills .container > * {
+    flex-basis: 40%;
+}
+.skills .container .about p:nth-child(1) {
+    text-transform: capitalize;
+}
+.skills .container .about p:nth-child(2) {
+ color : #A2A2A2
+}
+.skills .container .my-skills .skill {
+    position: relative;
+    width: 500px;
+    height: 25px;
+    background-color:#F0F0F0 ;
+    border-radius: 2px;
+}
+.skills .container .my-skills .skill  span {
+    position: absolute;
+    top : 0;
+    left : 0;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 2px;
+}
